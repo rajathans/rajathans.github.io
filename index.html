@@ -1,10 +1,219 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Rajat Hans</title>
-  </head>
-  <body>
-    <h1>Hello World</h1>
-    <p>Welcome to my GitHub Pages site.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rajat Hans</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fff;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100vh;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+      padding: 0;
+      transition: transform 0.3s ease;
+      z-index: 1000;
+    }
+    .theme-toggle:hover {
+      transform: scale(1.2);
+    }
+    /* Dark theme styles */
+    body.dark-theme {
+      color: #f5f5f5;
+      background-color: #000;
+    }
+    body.dark-theme .name {
+      color: #f5f5f5;
+    }
+    body.dark-theme .tagline {
+      color: #e0e0e0;
+    }
+    body.dark-theme .contact {
+      color: #e0e0e0;
+    }
+    body.dark-theme .contact-link {
+      color: #f5f5f5;
+    }
+    body.dark-theme .bio {
+      color: #fff;
+    }
+    body.dark-theme .bio-section h3 {
+      color: #fff;
+    }
+    body.dark-theme .bio-section p {
+      color: #fff;
+    }
+    body.dark-theme .theme-toggle {
+      border-color: #fff;
+      color: #fff;
+    }
+    
+    /* Auto dark mode based on system preference */
+    @media (prefers-color-scheme: dark) {
+      body:not(.light-theme) {
+        color: #f5f5f5;
+        background-color: #000;
+      }
+      body:not(.light-theme) .name {
+        color: #f5f5f5;
+      }
+      body:not(.light-theme) .tagline {
+        color: #e0e0e0;
+      }
+      body:not(.light-theme) .contact {
+        color: #e0e0e0;
+      }
+      body:not(.light-theme) .contact-link {
+        color: #f5f5f5;
+      }
+      body:not(.light-theme) .bio {
+        color: #fff;
+      }
+      body:not(.light-theme) .bio-section h3 {
+        color: #fff;
+      }
+      body:not(.light-theme) .bio-section p {
+        color: #fff;
+      }
+      body:not(.light-theme) .theme-toggle {
+        border-color: #fff;
+        color: #fff;
+      }
+    }
+    .name { 
+      font-size: 2.5rem; 
+      font-weight: 700; 
+      margin-bottom: 20px; 
+      color: #333; 
+    }
+    .tagline { 
+      font-size: 1.2rem; 
+      color: #333; 
+      margin-bottom: 20px;
+    }
+    .contact {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 40px;
+      line-height: 1.2;
+    }
+    .contact-link {
+      color: #333;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: all 0.3s ease;
+    }
+    .contact-link:hover {
+      text-decoration-thickness: 2px;
+    }
+    .bio {
+      color: #333;
+      line-height: 1.8;
+    }
+    .bio-intro {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+    .bio-section {
+      margin-bottom: 25px;
+    }
+    .bio-section h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: #333;
+      font-weight: 600;
+    }
+    .bio-section p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #333;
+    }
+    @media (max-width: 768px) {
+      body { padding: 40px 15px; }
+      .name { font-size: 2rem; }
+      .tagline { font-size: 1.1rem; }
+      .bio-intro { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+    <span id="theme-icon">🌙</span>
+  </button>
+  
+      <h1 class="name">Rajat Hans</h1>
+    <p class="tagline">founder & cto @ kenko · building vertical ai infrastructure for fitness</p>
+    <p class="contact">
+      <a href="https://x.com/rajathansdev" target="_blank" rel="noopener noreferrer" class="contact-link">X</a> /
+      <a href="https://linkedin.com/in/rajathans" target="_blank" rel="noopener noreferrer" class="contact-link">linkedIn</a> /
+      <a href="https://cal.com/rajathans" target="_blank" rel="noopener noreferrer" class="contact-link">book a meeting</a>
+    </p>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const themeIcon = document.getElementById('theme-icon');
+      
+      if (body.classList.contains('dark-theme')) {
+        // Switch to light theme
+        body.classList.remove('dark-theme');
+        body.classList.add('light-theme');
+        themeIcon.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
+      } else {
+        // Switch to dark theme
+        body.classList.remove('light-theme');
+        body.classList.add('dark-theme');
+        themeIcon.textContent = '☀️';
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    // Initialize theme on page load
+    function initTheme() {
+      const savedTheme = localStorage.getItem('theme');
+      const themeIcon = document.getElementById('theme-icon');
+      
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        themeIcon.textContent = '☀️';
+      } else if (savedTheme === 'light') {
+        document.body.classList.add('light-theme');
+        themeIcon.textContent = '🌙';
+      } else {
+        // No saved preference, check system preference
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          themeIcon.textContent = '☀️';
+        } else {
+          themeIcon.textContent = '🌙';
+        }
+      }
+    }
+
+    // Initialize theme when page loads
+    document.addEventListener('DOMContentLoaded', initTheme);
+  </script>
+</body>
 </html>
