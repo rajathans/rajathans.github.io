@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rajat Hans</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
       line-height: 1.6;
@@ -23,7 +29,7 @@
       min-height: 100vh;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
-    
+
 
     .theme-toggle {
       position: fixed;
@@ -37,206 +43,297 @@
       transition: transform 0.3s ease;
       z-index: 1000;
     }
+
     .theme-toggle:hover {
       transform: scale(1.2);
     }
-         /* Dark theme styles */
-     body.dark-theme {
-       color: #f5f5f5;
-       background-color: #000;
-     }
-     
+
+    /* Dark theme styles */
+    body.dark-theme {
+      color: #f5f5f5;
+      background-color: #000;
+    }
+
     body.dark-theme .name {
       color: #f5f5f5;
     }
+
     body.dark-theme .tagline {
       color: #e0e0e0;
     }
+
     body.dark-theme .contact {
       color: #e0e0e0;
     }
-         body.dark-theme .contact-link {
-       color: #f5f5f5;
-     }
-                       body.dark-theme .contact-link:hover {
-        color: #000;
-      }
-      body.dark-theme .kenko-link {
-        color: #e0e0e0;
-      }
-      body.dark-theme .kenko-link:hover {
-        color: #000;
-      }
+
+    body.dark-theme .contact-link {
+      color: #f5f5f5;
+    }
+
+    body.dark-theme .contact-link:hover {
+      color: #000;
+    }
+
+    body.dark-theme .kenko-link {
+      color: #e0e0e0;
+    }
+
+    body.dark-theme .kenko-link:hover {
+      color: #000;
+    }
+
+    body.dark-theme .github-title {
+      color: #f5f5f5;
+    }
+
+    body.dark-theme .contributions-chart {
+      filter: invert(1) hue-rotate(180deg);
+    }
+
     body.dark-theme .bio {
       color: #fff;
     }
+
     body.dark-theme .bio-section h3 {
       color: #fff;
     }
+
     body.dark-theme .bio-section p {
       color: #fff;
     }
+
     body.dark-theme .theme-toggle {
       border-color: #fff;
       color: #fff;
     }
-    
+
     /* Auto dark mode based on system preference */
     @media (prefers-color-scheme: dark) {
       body:not(.light-theme) {
         color: #f5f5f5;
         background-color: #000;
       }
+
       body:not(.light-theme) .name {
         color: #f5f5f5;
       }
+
       body:not(.light-theme) .tagline {
         color: #e0e0e0;
       }
+
       body:not(.light-theme) .contact {
         color: #e0e0e0;
       }
-             body:not(.light-theme) .contact-link {
-         color: #f5f5f5;
-       }
-                               body:not(.light-theme) .contact-link:hover {
-          color: #000;
-        }
-        body:not(.light-theme) .kenko-link {
-          color: #e0e0e0;
-        }
-        body:not(.light-theme) .kenko-link:hover {
-          color: #000;
-        }
+
+      body:not(.light-theme) .contact-link {
+        color: #f5f5f5;
+      }
+
+      body:not(.light-theme) .contact-link:hover {
+        color: #000;
+      }
+
+      body:not(.light-theme) .kenko-link {
+        color: #e0e0e0;
+      }
+
+      body:not(.light-theme) .kenko-link:hover {
+        color: #000;
+      }
+
+      body:not(.light-theme) .github-title {
+        color: #f5f5f5;
+      }
+
+      body:not(.light-theme) .contributions-chart {
+        filter: invert(1) hue-rotate(180deg);
+      }
+
       body:not(.light-theme) .bio {
         color: #fff;
       }
+
       body:not(.light-theme) .bio-section h3 {
         color: #fff;
       }
+
       body:not(.light-theme) .bio-section p {
         color: #fff;
       }
+
       body:not(.light-theme) .theme-toggle {
         border-color: #fff;
         color: #fff;
       }
     }
-    .name { 
-      font-size: 2rem; 
-      font-weight: 700; 
-      margin-bottom: 20px; 
-      color: #333; 
+
+    .name {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #333;
     }
-         .tagline { 
-       /* font-size: 1.1rem;  */
-       color: #333; 
-       margin-bottom: 20px;
-     }
-           .kenko-link {
-        color: #333;
-        text-decoration: none;
-        padding: 2px 4px;
-        border-radius: 3px;
-        transition: all 0.3s ease;
-      }
-             .kenko-link:hover {
-         color: #fff;
-       }
+
+    .tagline {
+      /* font-size: 1.1rem;  */
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .kenko-link {
+      color: #333;
+      text-decoration: none;
+      padding: 2px 4px;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+
+    .kenko-link:hover {
+      color: #fff;
+    }
+
     .contact {
       /* font-size: 1rem; */
       color: #333;
       margin-bottom: 40px;
       line-height: 1.2;
     }
-         .contact-link {
-       color: #333;
-       text-decoration: none;
-       padding: 2px 4px;
-       border-radius: 3px;
-       transition: all 0.3s ease;
-     }
-           .contact-link:hover {
-        color: #fff;
-      }
+
+    .contact-link {
+      color: #333;
+      text-decoration: none;
+      padding: 2px 4px;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+
+    .contact-link:hover {
+      color: #fff;
+    }
+
     .bio {
       color: #333;
       line-height: 1.8;
     }
+
     .bio-intro {
       font-size: 1.1rem;
       margin-bottom: 30px;
       font-style: italic;
     }
+
     .bio-section {
       margin-bottom: 25px;
     }
+
     .bio-section h3 {
       font-size: 1rem;
       margin-bottom: 8px;
       color: #333;
       font-weight: 600;
     }
+
     .bio-section p {
       font-size: 0.95rem;
       line-height: 1.6;
       color: #333;
     }
+
+    .github-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .github-chart {
+      overflow-x: auto;
+      padding: 10px 0;
+    }
+
+    .contributions-chart {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+
     @media (max-width: 768px) {
-      body { padding: 40px 15px; }
-      .name { font-size: 2rem; }
-      .tagline { font-size: 1.1rem; }
-      .bio-intro { font-size: 1rem; }
+      body {
+        padding: 40px 15px;
+      }
+
+      .name {
+        font-size: 2rem;
+      }
+
+      .tagline {
+        font-size: 1.1rem;
+      }
+
+      .bio-intro {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
+
 <body>
   <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
     <span id="theme-icon">🌙</span>
   </button>
-  
-      <h1 class="name">Rajat Hans</h1>
-         <p class="tagline">founder & cto @ <a href="https://gokenko.com" target="_blank" rel="noopener noreferrer" class="kenko-link">kenko</a> · building vertical ai infrastructure for fitness and wellness</p>
-    <p class="contact">
-      <a href="https://x.com/rajathans9" target="_blank" rel="noopener noreferrer" class="contact-link">X</a> ·
-      <a href="https://github.com/rajathans" target="_blank" rel="noopener noreferrer" class="contact-link">github</a> ·
-      <a href="https://linkedin.com/in/rajathans" target="_blank" rel="noopener noreferrer" class="contact-link">linkedIn</a> ·
-      <a href="https://calendar.google.com/calendar/appointments/AcZssZ1nDCmGLEuKVm7sAi_Y1NaCepNa3LevOpHpgnQ=" target="_blank" rel="noopener noreferrer" class="contact-link">book a meeting</a>
-    </p>
 
-     <script>
-     // Random color generator for link hovers
-     function getRandomColor() {
-       const colors = [
-         '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7',
-         '#DDA0DD', '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E9',
-         '#F8C471', '#82E0AA', '#F1948A', '#85C1E9', '#D7BDE2',
-         '#A3E4D7', '#FAD7A0', '#D5A6BD', '#AED6F1', '#A9DFBF',
-         '#F9E79F', '#D7DBDD', '#FADBD8', '#D6EAF8', '#E8DAEF'
-       ];
-       return colors[Math.floor(Math.random() * colors.length)];
-     }
+  <h1 class="name">Rajat Hans</h1>
+  <p class="tagline">founder & cto @ <a href="https://gokenko.com" target="_blank" rel="noopener noreferrer"
+      class="kenko-link">kenko</a> · building vertical ai infrastructure for fitness and wellness</p>
+  <p class="contact">
+    <a href="https://x.com/rajathans9" target="_blank" rel="noopener noreferrer" class="contact-link">X</a> ·
+    <a href="https://github.com/rajathans" target="_blank" rel="noopener noreferrer" class="contact-link">github</a> ·
+    <a href="https://linkedin.com/in/rajathans" target="_blank" rel="noopener noreferrer"
+      class="contact-link">linkedIn</a> ·
+    <a href="https://calendar.google.com/calendar/appointments/AcZssZ1nDCmGLEuKVm7sAi_Y1NaCepNa3LevOpHpgnQ="
+      target="_blank" rel="noopener noreferrer" class="contact-link">book a meeting</a>
+  </p>
 
-     // Add random color hover effects to all links
-     function initRandomColorHovers() {
-       const links = document.querySelectorAll('.contact-link, .kenko-link');
-       
-       links.forEach(link => {
-         link.addEventListener('mouseenter', function() {
-           const randomColor = getRandomColor();
-           this.style.backgroundColor = randomColor;
-         });
-         
-         link.addEventListener('mouseleave', function() {
-           this.style.backgroundColor = '';
-         });
-       });
-     }
+  <div class="github-section">
+    <div class="github-chart">
+      <img src="https://ghchart.rshah.org/rajathans" alt="GitHub Contributions Chart" class="contributions-chart">
+    </div>
+  </div>
 
-     function toggleTheme() {
+  <script>
+    // Random color generator for link hovers
+    function getRandomColor() {
+      const colors = [
+        '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7',
+        '#DDA0DD', '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E9',
+        '#F8C471', '#82E0AA', '#F1948A', '#85C1E9', '#D7BDE2',
+        '#A3E4D7', '#FAD7A0', '#D5A6BD', '#AED6F1', '#A9DFBF',
+        '#F9E79F', '#D7DBDD', '#FADBD8', '#D6EAF8', '#E8DAEF'
+      ];
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    // Add random color hover effects to all links
+    function initRandomColorHovers() {
+      const links = document.querySelectorAll('.contact-link, .kenko-link');
+
+      links.forEach(link => {
+        link.addEventListener('mouseenter', function () {
+          const randomColor = getRandomColor();
+          this.style.backgroundColor = randomColor;
+        });
+
+        link.addEventListener('mouseleave', function () {
+          this.style.backgroundColor = '';
+        });
+      });
+    }
+
+    function toggleTheme() {
       const body = document.body;
       const themeIcon = document.getElementById('theme-icon');
-      
+
       if (body.classList.contains('dark-theme')) {
         // Switch to light theme
         body.classList.remove('dark-theme');
@@ -256,7 +353,7 @@
     function initTheme() {
       const savedTheme = localStorage.getItem('theme');
       const themeIcon = document.getElementById('theme-icon');
-      
+
       if (savedTheme === 'dark') {
         document.body.classList.add('dark-theme');
         themeIcon.textContent = '☀️';
@@ -273,11 +370,12 @@
       }
     }
 
-         // Initialize theme and random colors when page loads
-     document.addEventListener('DOMContentLoaded', function() {
-       initTheme();
-       initRandomColorHovers();
-     });
+    // Initialize theme and random colors when page loads
+    document.addEventListener('DOMContentLoaded', function () {
+      initTheme();
+      initRandomColorHovers();
+    });
   </script>
 </body>
+
 </html>
